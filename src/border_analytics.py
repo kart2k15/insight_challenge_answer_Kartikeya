@@ -55,7 +55,7 @@ if __name__ == "__main__":
 	
 	arr.sort(key=lambda k: (k[1],k[3], k[2], k[0]),reverse=True)
 	header=['Border','Date','Measure','Value','Average']
-	with open(output_file+".csv", "a", newline="") as f:
+	with open("report.csv", "a", newline="") as f:
 		writer = csv.writer(f)
 		writer.writerow(i for i in header)
 		writer.writerows(arr)
