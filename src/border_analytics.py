@@ -6,7 +6,7 @@ import math
 
 if __name__ == "__main__":
 	input_file=sys.argv[1]
-	output_file=sys.argv[2]
+	filepath = os.path.join('output/', 'report.csv')
 	groupBy_dict={}
 	with open(input_file) as csv_file:
 		next(csv_file)
@@ -56,7 +56,7 @@ if __name__ == "__main__":
 	
 	arr.sort(key=lambda k: (k[1],k[3], k[2], k[0]),reverse=True)
 	header=['Border','Date','Measure','Value','Average']
-	with open(output_file, "w", newline="") as f:
+	with open(filepath, "w", newline="") as f:
 		writer = csv.writer(f)
 		writer.writerow(i for i in header)
 		writer.writerows(arr)
