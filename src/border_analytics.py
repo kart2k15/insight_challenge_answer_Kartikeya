@@ -60,6 +60,4 @@ if __name__ == "__main__":
 		writer = csv.writer(f)
 		writer.writerow(i for i in header)
 		writer.writerows(arr)
-	input_file.close()
-	output_file.close()
 	
