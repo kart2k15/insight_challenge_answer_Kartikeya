@@ -6,7 +6,7 @@ import math
 
 if __name__ == "__main__":
 	input_file=sys.argv[1]
-	output_file="output/report.csv"
+	output_file=sys.argv[2]
 	groupBy_dict={}
 	with open(input_file) as csv_file:
 		next(csv_file)
